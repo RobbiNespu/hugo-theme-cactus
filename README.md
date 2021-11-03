@@ -9,11 +9,13 @@ Some works are still in progress. See [TODOS](#todos) below.
 ## Install
 
 1. clone cactus to your hugo site's `themes` folder.
+
 ```
 git clone https://github.com/monkeyWzr/hugo-theme-cactus.git themes/cactus
 ```
 
 2. change your theme to cactus in your site config
+
 ```toml
 # config.toml
 
@@ -22,6 +24,7 @@ theme = "cactus"
 
 3. config your site. See [Config] or a [complete config sample](exampleSite/config.toml)
 4. test your site
+
 ```
 hugo server
 ```
@@ -75,35 +78,37 @@ weight = 4
 
 ### Homepage settings
 
-* description: description will be displayed in the homepage. Markdown syntax is supported in the description string.
+- description: description will be displayed in the homepage. Markdown syntax is supported in the description string.
+
 ```toml
 [params]
 
   description = "Hugo is a general-purpose website framework. Technically speaking, Hugo is a static site generator. Unlike systems that dynamically build a page with each visitor request, Hugo builds pages when you create or update your content. Since websites are viewed far more often than they are edited, Hugo is designed to provide an optimal viewing experience for your website’s end users and an ideal writing experience for website authors."
 ```
 
-* set your main section (used as the link for the "writings" title on the homepage)
+- set your main section (used as the link for the "writings" title on the homepage)
 
 ```toml
 [params]
   mainSection = "posts"
 ```
 
-* change the default main section title from Writings, to something else:
+- change the default main section title from Writings, to something else:
 
 ```toml
 [params]
   mainSectionTitle = "Blog"
 ```
 
-* Show only the 5 most recent posts (default)
+- Show only the 5 most recent posts (default)
 
 ```toml
 [params]
   showAllPostsOnHomePage = false
   postsOnHomePage = 5
 ```
-* show all posts
+
+- show all posts
 
 ```toml
 [params]
@@ -111,21 +116,22 @@ weight = 4
   postsOnHomePage = 5 # this option will be ignored
 ```
 
-* show tagsoverview (default) or not
-* 
+- show tagsoverview (default) or not
+-
+
 ```toml
 [params]
   tagsOverview = true
 ```
 
-* display the table of contents inline on blog posts, rather than as part of the navigation menu:
+- display the table of contents inline on blog posts, rather than as part of the navigation menu:
 
 ```toml
 [params]
   tocInline = true
 ```
 
-* show projects list (default) or not.
+- show projects list (default) or not.
 
 ```toml
 [params]
@@ -141,20 +147,21 @@ Create your projects data file `data/projects.yaml|toml|json`. Hugo support yaml
 for former hexo cactus users: please assign your json array to a `list` key.
 
 for example, `data/projects.json`:
+
 ```json
 {
-   "list": [
-      {
-         "name":"Hexo",
-         "url":"https://hexo.io/",
-         "desc":"A fast, simple & powerful blog framework"
-      },
-      {
-         "name":"Font Awesome",
-         "url":"http://fontawesome.io/",
-         "desc":"The iconic font and CSS toolkit"
-      }
-   ]
+  "list": [
+    {
+      "name": "Hexo",
+      "url": "https://hexo.io/",
+      "desc": "A fast, simple & powerful blog framework"
+    },
+    {
+      "name": "Font Awesome",
+      "url": "http://fontawesome.io/",
+      "desc": "The iconic font and CSS toolkit"
+    }
+  ]
 }
 ```
 
@@ -191,6 +198,7 @@ Assign your copy right to `.Site.Params.Copyright.Name`.
 ### Comments
 
 Comments is disabled by default. Enable comments in your `.Site.Params`.
+
 ```toml
 [params]
   [params.comments]
@@ -199,6 +207,7 @@ Comments is disabled by default. Enable comments in your `.Site.Params`.
 ```
 
 You can also enable/disable comments per post. in your posts' front matter, add:
+
 ```yaml
 comments: true
 ```
@@ -238,11 +247,13 @@ default config:
 Cactus uses hugo's bulit in analytics templates. Check [hugo's documents](https://gohugo.io/templates/internal#google-analytics) for details.
 
 Set you tracking id in your site config.
+
 ```toml
 googleAnalytics = "UA-XXXXXXXX-XX" # or G-XXXXXXXX if you are using Google Analytics v4 (gtag.js)
 ```
 
 If you are using Google Analytics v3 (analytics.js), you can switch to asynchronous tracking by set `params.googleAnalyticsAsync` to `true`.
+
 ```toml
 [params]
 googleAnalyticsAsync = true # not required
@@ -264,19 +275,22 @@ Please also check [Configure RSS](https://gohugo.io/templates/rss/#configure-rss
 ### Mathjax
 
 Cactus supports mathjax. Just add `mathjax` option in your site config:
+
 ```toml
 [params]
   mathjax = true  # not required
 ```
 
 You can also enable/disable mathjax per post. In your posts' front matter, add:
+
 ```yaml
 mathjax: true # or false
 ```
 
 The site config will be ignored when `mathjax` option exists in front matter.
 
-### Archive 
+### Archive
+
 Pagination on posts archive can be disabled to show all posts in chronological order
 
 ```toml
@@ -294,7 +308,7 @@ Pagination on posts archive can be disabled to show all posts in chronological o
 - [ ] toc template
 - [x] Customizable copyright year
 - [ ] gallery
-- [ ] expose [mathjax configuration](https://docs.mathjax.org/en/latest/web/configuration.html#web-configuration) 
+- [ ] expose [mathjax configuration](https://docs.mathjax.org/en/latest/web/configuration.html#web-configuration)
 
 ## License
 
