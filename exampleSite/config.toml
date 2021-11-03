@@ -88,7 +88,7 @@ weight = 4
     name = "You" # cactus will use title if copyright is not set
     startYear = 2021
     endYear = 2021
-    
+
   # the value of name should be an valid font awesome icon name (brands type)
   # https://fontawesome.com/icons?d=gallery&s=brands
   [[params.social]]

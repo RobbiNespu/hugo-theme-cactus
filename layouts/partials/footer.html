@@ -7,7 +7,7 @@
     {{ if $copyrightEnabled }}
     {{ $startYear := .Site.Params.Copyright.StartYear | default (now.Format "2006") }}
     {{ $endYear := .Site.Params.Copyright.EndYear | default (now.Format "2006") }}
-    Copyright  &copy; 
+    Copyright  &copy;
     {{ if (eq $startYear $endYear) }} {{ $startYear }} {{ else }} {{ $startYear }}-{{ $endYear }} {{ end }} {{ if .Site.Params.Copyright.Name }} {{ print .Site.Params.Copyright.Name | markdownify }} {{ else }} {{ print .Site.Title }} {{ end }}
   {{ end }}
   </div>
@@ -15,7 +15,7 @@
   <div class="footer-right">
     <nav>
       <ul>
-        {{ range .Site.Menus.main }} 
+        {{ range .Site.Menus.main }}
         <li><a href="{{ .URL }}">{{ .Name }}</a></li>
         {{ end }}
       </ul>
