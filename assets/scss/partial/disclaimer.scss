@@ -1,10 +1,9 @@
 #disclaimer{
     position: absolute;
     bottom: 1px;
-    margin-bottom: -2rem;
     display: flex !important; 
-    padding-bottom: 4%;
-
+    align-self: flex-end;
+    
     .center-text{
         text-align: center;
     }
@@ -17,6 +16,7 @@
         //font-weight: bold;
         font-size: 10px;
         background-image: none;
+        color: #666;
     }
     
 }
