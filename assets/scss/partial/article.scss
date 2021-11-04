@@ -36,6 +36,8 @@ article {
         //filter: grayscale(100%);
         //-webkit-filter: grayscale(100%);
       }
+      -webkit-print-color-adjust: exact !important;   /* Chrome, Safari, Edge */
+      color-adjust: exact !important;                 /*Firefox*/
     }
   }
   .content {
