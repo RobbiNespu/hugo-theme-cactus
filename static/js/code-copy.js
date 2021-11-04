@@ -5,6 +5,8 @@
     copyBtn.className = 'code-copy-btn'
     copyBtn.type = 'button'
     copyBtn.innerText = 'copy'
+    var t = document.createAttribute("noprint");
+    copyBtn.setAttributeNode(t);
 
     let resetTimer
     copyBtn.addEventListener('click', () => {
