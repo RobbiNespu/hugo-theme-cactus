@@ -11,6 +11,9 @@
     {{ if (eq $startYear $endYear) }} {{ $startYear }} {{ else }} {{ $startYear }}-{{ $endYear }} {{ end }} {{ if .Site.Params.Copyright.Name }} {{ print .Site.Params.Copyright.Name | markdownify }} {{ else }} {{ print .Site.Title }} {{ end }}
   {{ end }}
   </div>
+  <div class="credits">
+    Made with &#10084;&#65039; and <a href="https://www.gohugo.io">Hugo</a>.
+  </div>
 
   <div class="footer-right">
     <nav>
