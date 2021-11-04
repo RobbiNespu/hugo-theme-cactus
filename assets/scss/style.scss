@@ -22,7 +22,7 @@ html {
 }
 body {
   margin: 0;
-  height: 100%;
+  // height: 100%;
   background-color: $color-background;
   color: $color-text;
   font-display: swap;
@@ -142,6 +142,7 @@ body {
 @import "partial/archive";
 @import "partial/comments";
 @import "partial/footer";
+@import "partial/disclaimer";
 @import "partial/pagination";
 @import "partial/search";
 @import "partial/tags";
