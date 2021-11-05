@@ -1,0 +1,71 @@
+{{ $currentPage := . -}}
+<style>
+
+    
+    li.dropdown {
+      display: inline-block;
+    }
+    
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+      text-decoration: none;
+    }
+    
+    .dropdown-content a {
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      text-align: left;
+    }
+    
+    .dropdown-content a:hover {
+        /* background-color: #f1f1f1; */
+        text-decoration: none;
+        background-color: red;
+    }
+    
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+</style>
+<div id="nav">
+    <ul>
+      <li class="icon">
+        <a href="#" aria-label="Menu"><i class="fas fa-bars fa-2x" aria-hidden="true"></i></a>
+      </li>
+      {{ range .Site.Menus.main }}
+        {{ if .HasChildren }}
+          <li class="dropdown">
+            <a href="javascript:void(0)" class="dropbtn">{{ .Name }}</a>
+            <div class="dropdown-content">
+              {{ range .Children }}
+                <a href="{{ .URL }}">{{ .Name }}</a>
+              {{ end }}
+            </div>
+          </li>
+        {{ else }}
+        <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+        {{ end }}
+      {{ end }}
+      <!-- {{ range .Site.Menus.main }}
+        <li class="{{ if $currentPage.HasMenuCurrent "main" . }}active{{ end }}">
+            <span>{{ .Name }}</span>
+            {{ if .HasChildren }}
+            <span class="drop-icon" for="{{ .Name }}">▾</span>
+            <ul class="sub-menu">
+                {{ range .Children }}
+                <li class="{{ if $currentPage.HasMenuCurrent "main" . }}active{{ end }}">
+                    <span>{{ .Name }}</span>
+                </li>
+                {{ end }}
+            </ul>
+           {{ end }}
+        </li>
+        {{ end }} -->
+    </ul>
+</div>
