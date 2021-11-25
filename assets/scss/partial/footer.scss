@@ -48,8 +48,8 @@
 }
 @media (min-width: 39rem) {
   #footer {
-    display: flex;
-    flex-flow: row wrap;
+    // display: flex;
+    // flex-flow: row wrap;
     justify-content: space-between;
     align-items: center;
     align-content: center;
@@ -63,8 +63,8 @@
       align-self: flex-end;
     }
     .credits {
-      position: absolute;
-      left: 0px;
+      // position: absolute;
+      // left: 0px;
       bottom: 20px;
     }
   }
