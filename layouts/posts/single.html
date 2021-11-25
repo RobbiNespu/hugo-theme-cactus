@@ -13,12 +13,13 @@
         {{ .Title }}
       </h1>
       <div class="meta">
-        {{ if (or (isset .Site "author") (isset .Site "title"))}}
+        {{ printf "%#v" $.Site.Title }}
+        {{ if (or (.Site.Author) (.Site.Title))}}
         <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <span itemprop="name">
-            {{ if isset .Site "author" }}
+            {{ if .Site.Author }}
               {{ .Site.Author }}
-            {{ else if isset .Site "title" }}
+            {{ else if .Site.Title }}
               {{ .Site.Title }}
             {{ end }}
           </span>
