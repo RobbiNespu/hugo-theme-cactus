@@ -1,0 +1,49 @@
+/* static tweet */
+.static-tweet{
+  background:rgba(29, 161, 242, 0.1);
+  border: 1px dashed #87cefa;
+  border-left-color: #1DA1F2;
+  border-left-style: solid;
+  border-left-width: 7px;
+  padding-right: 20px;
+}
+
+blockquote.static-tweet{
+  color: #535151;
+}
+blockquote.static-tweet p{
+  text-align: unset;
+}
+blockquote.static-tweet p.twitter-meta {
+  margin-left: 10px;
+}
+blockquote.twitter-tweet a,
+blockquote.static-tweet a{
+  font-size: .95rem;
+  background-image: none;
+}
+blockquote.static-tweet div img.avatar{
+  min-width:6rem;max-width:6rem;min-height:6rem;max-height:6rem;padding:1em;border-radius: 40%;
+  box-shadow: 0 0px 0px rgba(0,0,0,.2);
+}
+blockquote.static-tweet a img{
+  max-width: 45% !important;
+  padding: 0.5em;
+  display: inherit;
+  margin-left: 15px;
+}
+
+
+
+.videoContainer {
+  position: relative;
+}
+.thumb {
+  position: absolute;
+  width: 96px;
+  height: 96px;
+  left: 50%;
+  top: 50%;
+  margin-left: -48px; /*half of the width */
+  margin-top: -48px; /*half of the height */
+}
