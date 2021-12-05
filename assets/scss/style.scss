@@ -153,13 +153,14 @@ body {
 pre {
   overflow-x: auto;
   padding: 15px 15px 10px 15px;
-  border: 1px dotted $color-border;
+  border: 1px dotted $color-border-code;
   border-radius: 2px;
   -webkit-border-radius: 2px;
   font-size: 13px;
   font-family: $font-family-mono;
   line-height: 22px;
   position: relative;
+  background-color: $color-border-code;
 
   .code-copy-btn {
     position: absolute;
@@ -198,7 +199,7 @@ code {
   border: 1px dotted #40aa60; //$color-border;
   border-radius: 2px;
   -webkit-border-radius: 2px;
-  background-color:#282a36;
+  background-color: $color-border-code;
 }
 
 .highlight {
