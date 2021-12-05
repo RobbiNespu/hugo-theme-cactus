@@ -24,8 +24,7 @@
           </span>
         </span>
         {{ end }}
-        <div class="postdate">
-          📅
+        <div class="postdate">📅
           {{ $dataFormat := .Site.Params.dateFormat | default "2006-01-02" }}
           <time datetime="{{ .Date }}" itemprop="datePublished">{{ .Date.Format $dataFormat }}</time>
           {{ if (and .Site.Params.show_updated (ne .Lastmod .Date)) }}
@@ -34,15 +33,13 @@
         </div>
         {{ $showReadTime := .Site.Params.showReadTime | default false }}
         {{if $showReadTime}}
-        <div class="article-read-time">
-          ⏰
+        <div class="article-read-time">⏰
           {{ $readTime := math.Round (div (countwords .Content) 220.0) }}
           {{ $readTime }} minute read
         </div>
         {{ end }}
         {{ if gt .Params.categories 0 }}
-        <div class="article-category">
-            📂
+        <div class="article-category">📂
             {{ range $index, $value := .Params.categories }}
             {{ if gt $index 0 }} {{ print ", " }} {{ end }}
             <a class="category-link" href="{{ "/categories/" | relLangURL }}{{ $value | urlize }}">{{ $value }}</a>
@@ -50,8 +47,7 @@
         </div>
         {{ end }}
         {{ if gt .Params.tags 0 }}
-        <div class="article-tag">
-            🏷️
+        <div class="article-tag">🏷️
             {{ range $index, $value := .Params.tags }}
             {{ if gt $index 0 }} {{ print ", " }} {{ end }}
             <a class="tag-link" href="{{ "/tags/" | relLangURL }}{{ $value | urlize }}" rel="tag">{{ $value }}</a>
