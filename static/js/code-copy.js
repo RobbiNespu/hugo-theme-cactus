@@ -1,38 +1,41 @@
 (() => {
-
   function createCopyButton(codeNode) {
-    const copyBtn = document.createElement('button')
-    copyBtn.className = 'code-copy-btn'
-    copyBtn.type = 'button'
-    copyBtn.innerText = 'copy'
+    const copyBtn = document.createElement("button");
+    copyBtn.className = "code-copy-btn";
+    copyBtn.type = "button";
+    copyBtn.innerText = "copy";
     var t = document.createAttribute("noprint");
     copyBtn.setAttributeNode(t);
 
-    let resetTimer
-    copyBtn.addEventListener('click', () => {
-      navigator.clipboard.writeText(codeNode.innerText).then(() => {
-        copyBtn.innerText = 'copied!'
-      }).then(() => {
-        clearTimeout(resetTimer)
-        resetTimer = setTimeout(() => {
-          copyBtn.innerText = 'copy'
-        }, 1000)
-      })
-    })
+    let resetTimer;
+    copyBtn.addEventListener("click", () => {
+      navigator.clipboard
+        .writeText(codeNode.innerText)
+        .then(() => {
+          copyBtn.innerText = "copied!";
+        })
+        .then(() => {
+          clearTimeout(resetTimer);
+          resetTimer = setTimeout(() => {
+            copyBtn.innerText = "copy";
+          }, 1000);
+        });
+    });
 
-    return copyBtn
+    return copyBtn;
   }
 
-  document.querySelectorAll('pre > code')
-  .forEach((codeNode) => {
+  document.querySelectorAll("pre > code").forEach((codeNode) => {
     const copyBtn = createCopyButton(codeNode);
-    const preNode = codeNode.parentNode
-    codeNode.parentNode.insertBefore(copyBtn, codeNode)
-  })
+    const preNode = codeNode.parentNode;
+    codeNode.parentNode.insertBefore(copyBtn, codeNode);
+  });
 
-  document.querySelectorAll('.highlight table > tbody > tr > td:first-child .code-copy-btn')
-  .forEach((btn) => {
-    btn.remove()
-  })
-
-})()
+  document
+    .querySelectorAll(
+      ".highlight table > tbody > tr > td:first-child .code-copy-btn"
+    )
+    .forEach((btn) => {
+      btn.remove();
+    });
+})();
