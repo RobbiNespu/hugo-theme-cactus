@@ -9,13 +9,17 @@
 
     let resetTimer;
     copyBtn.addEventListener("click", () => {
-      navigator.clipboard.writeText(codeNode.innerText)
-          .then(() => { copyBtn.innerText = "copied!"; })
-          .then(() => {
-            clearTimeout(resetTimer);
-            resetTimer =
-                setTimeout(() => { copyBtn.innerText = "copy"; }, 1000);
-          });
+      navigator.clipboard
+        .writeText(codeNode.innerText)
+        .then(() => {
+          copyBtn.innerText = "copied!";
+        })
+        .then(() => {
+          clearTimeout(resetTimer);
+          resetTimer = setTimeout(() => {
+            copyBtn.innerText = "copy";
+          }, 1000);
+        });
     });
 
     return copyBtn;
@@ -28,7 +32,10 @@
   });
 
   document
-      .querySelectorAll(
-          ".highlight table > tbody > tr > td:first-child .code-copy-btn")
-      .forEach((btn) => { btn.remove(); });
+    .querySelectorAll(
+      ".highlight table > tbody > tr > td:first-child .code-copy-btn"
+    )
+    .forEach((btn) => {
+      btn.remove();
+    });
 })();
