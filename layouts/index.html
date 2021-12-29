@@ -108,4 +108,24 @@
     </ul>
   </section>
   {{ end }}
+  {{ $showNews := false }}
+  {{ if (isset .Site.Params "news") }}
+    {{ $showNews = .Site.Params.News.enabledOnHomePage | default false }}
+  {{ end }}
+  {{ if $showNews }}
+  <section id="news">
+    <span class="h1"><a href={{ "news" | absURL }}>News</a></span>
+    <ul class="news-list">
+      {{ $newsLimit := .Site.Params.News.NewsOnHomePage | default 5 }}
+      {{ range first $newsLimit .Site.Data.news.list }}
+      <li class="news-item">
+        {{ .date }}:
+        {{ if .url }}<a href="{{ .url }}">{{ end }}
+          {{ .desc | markdownify }}
+        {{ if .url }}</a>{{ end }}
+      </li>
+      {{ end }}
+  </ul>
+  </section>
+  {{ end }}
 {{ end }}
