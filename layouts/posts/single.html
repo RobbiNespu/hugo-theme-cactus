@@ -67,7 +67,7 @@
       {{ .Content}}
     </div>
     {{ if gt .Params.tags 0 }}
-        <div class="article-tag">🏷️
+        <div class="article-tag">
             {{ range $index, $value := .Params.tags }}
             {{ if gt $index 0 }} {{ print ", " }} {{ end }}
             <a class="tag-link" href="{{ "/tags/" | relLangURL }}{{ $value | urlize }}" rel="tag">{{ $value }}</a>
