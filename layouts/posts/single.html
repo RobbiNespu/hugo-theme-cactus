@@ -35,7 +35,7 @@
         {{if $showReadTime}}
         <div class="article-read-time">⏰
           {{ $readTime := math.Round (div (countwords .Content) 220.0) }}
-          {{ $readTime }} minute read
+          {{ $readTime }} minutes
         </div>
         {{ end }}
         {{ if gt .Params.categories 0 }}
@@ -43,14 +43,6 @@
             {{ range $index, $value := .Params.categories }}
             {{ if gt $index 0 }} {{ print ", " }} {{ end }}
             <a class="category-link" href="{{ "/categories/" | relLangURL }}{{ $value | urlize }}">{{ $value }}</a>
-            {{ end }}
-        </div>
-        {{ end }}
-        {{ if gt .Params.tags 0 }}
-        <div class="article-tag">🏷️
-            {{ range $index, $value := .Params.tags }}
-            {{ if gt $index 0 }} {{ print ", " }} {{ end }}
-            <a class="tag-link" href="{{ "/tags/" | relLangURL }}{{ $value | urlize }}" rel="tag">{{ $value }}</a>
             {{ end }}
         </div>
         {{ end }}
@@ -74,6 +66,14 @@
     <div class="content" itemprop="articleBody">
       {{ .Content}}
     </div>
+    {{ if gt .Params.tags 0 }}
+        <div class="article-tag">🏷️
+            {{ range $index, $value := .Params.tags }}
+            {{ if gt $index 0 }} {{ print ", " }} {{ end }}
+            <a class="tag-link" href="{{ "/tags/" | relLangURL }}{{ $value | urlize }}" rel="tag">{{ $value }}</a>
+            {{ end }}
+        </div>
+        {{ end }}
   </article>
 
   {{ partial "related.html" . }}
