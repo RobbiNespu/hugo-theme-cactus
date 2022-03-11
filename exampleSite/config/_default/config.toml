@@ -117,5 +117,3 @@ disqusShortname = "example" # Used when comments is enabled. Cactus will use sit
 
 languageCode = "en"
 defaultContentLanguage = "en"
-[languages.en]
-[languages.ms]
