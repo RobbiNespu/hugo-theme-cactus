@@ -1,0 +1,33 @@
+{{ define "main" }}
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+<!-- TODO: gallery -->
+  <div class="content" itemprop="articleBody">
+
+    {{ $showNews := false }}
+    {{ if (isset .Site.Params "news") }}
+      {{ $showNews = .Site.Params.News.Enabled | default false }}
+    {{ end }}
+    {{ if $showNews }}
+    <section id="news">
+      <span class="h1"><a href={{ "news" | absURL }}>News</a></span>
+      <ul class="post-list">
+        {{ range .Site.Data.news.list }}
+        <li class="post-item">
+          <div class="meta">
+            <time>{{ .date }}</time>
+          </div>
+          <span>    
+            {{ if .url }}<a href="{{ .url }}">{{ end }}
+              {{ .desc | markdownify }}
+            {{ if .url }}</a>{{ end }}
+          </span>
+
+        </li>
+        {{ end }}
+    </ul> 
+    </section> 
+    {{ end }}
+
+  </div>
+</article>
+{{ end }} 
