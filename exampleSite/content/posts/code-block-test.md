@@ -3,12 +3,36 @@ title: Code Block Test
 date: 2021-06-27 09:00:00
 tags:
     - test
+    - tag1
+    - tag2
+    - tag3
+    - tag4
+    - tag5
+    - tag6
+    - tag7
+    - tag8
+    - tag9
+    - tag10
 categories:
     - tech
 keywords:
     - markdown
     - code block
 ---
+
+> KUALA LUMPUR, Dec 3 — Malaysia’s new Covid-19 infections dropped to 4,896 today as compared to 5,551 cases yesterday. Health director-general Tan Sri Dr Noor Hisham Abdullah said this bring the cumulative number of Covid-19 cases nationwide now to 2,654,474.
+
+|    | date       |   time_over_max |   time_under_min |   time_normal |
+|---:|:-----------|---------------------------:|----------------------------:|-------------------------:|
+|  0 | 2021-08-16 |0%    |                        1.15% |                    98.85% |
+|  1 | 2021-08-17 |0.79% |                       13.34% |                    85.87% |
+|  2 | 2021-08-18 |4.9%  |                        4.44% |                    90.66% |
+|  3 | 2021-08-19 |2.43% |                        0%    |                    97.57% |
+|  4 | 2021-08-20 |0%    |                        0%    |                   100%    |
+|  5 | 2021-08-22 |1.16% |                        0%    |                    98.84% |
+|  6 | 2021-08-23 |0%    |                        3.59% |                    96.41% |
+|  7 | 2021-08-24 |0%    |                       43.38% |                    56.62% |
+|  8 | 2021-08-25 |0%    |                       62.44% |                    37.56% |
 
 
 `String`
