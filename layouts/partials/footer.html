@@ -1,6 +1,6 @@
 <footer id="footer" noprint>
   <div class="footer-left">
-    Content licensed under CC BY-NC-SA 4.0.
+    {{ i18n "contentLicense"}}
     {{ $copyrightEnabled := true }}
     {{ if (isset .Site.Params "copyright") }}
       {{ $copyrightEnabled = .Site.Params.Copyright.Enabled | default false }}
@@ -8,7 +8,7 @@
     {{ if $copyrightEnabled }}
     {{ $startYear := .Site.Params.Copyright.StartYear | default (now.Format "2006") }}
     {{ $endYear := .Site.Params.Copyright.EndYear | default (now.Format "2006") }}
-    Copyright  &copy;
+    {{ i18n "Copyright"}}  &copy;
     {{ if (eq $startYear $endYear) }} {{ $startYear }} {{ else }} {{ $startYear }}-{{ $endYear }} {{ end }} {{ if .Site.Params.Copyright.Name }} {{ print .Site.Params.Copyright.Name | markdownify }} {{ else }} {{ print .Site.Title }} {{ end }}
   {{ end }}
   </div>
@@ -25,8 +25,8 @@
     &gt;
   </div>
   <div style="position: absolute;margin-bottom: -45px;padding-top: 15px;display: block;">
-    Best viewed with any modern GUI web browsers with resolution of 1280x1024.
-    The postings on this site are my own and don't necessarily represent my employer’s positions, strategies or opinions.<br/><br/>
-    Made with &#10084;&#65039; and <a href="https://www.gohugo.io">Hugo</a>.<br/><br/>
+    {{ i18n "bestView" }}
+    {{ i18n "disclaimer" }}<br/><br/>
+    {{ i18n "made_with"}} &#10084;&#65039; {{ i18n "and" }} <a href="https://www.gohugo.io">Hugo</a>.<br/><br/>
   </div>
 </footer>
