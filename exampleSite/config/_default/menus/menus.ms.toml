@@ -1,0 +1,95 @@
+[[main]]
+  identifier = "home"
+  name = "Utama"
+  url = "/"
+  weight = 1
+
+[[main]]
+    identifier = "category"
+    name = "Arkib"
+    url = "/posts/ms"
+    weight = 2
+[[main]]
+    identifier = "category1"
+    name = "📝 artikel"
+    url = "/categories/article"
+    parent = "category"
+    weight = 1
+[[main]]
+    identifier = "category2"
+    name = "⭐️ Penanda buku"
+    url = "/categories/bookmarks"
+    parent = "category"
+    weight = 2
+[[main]]
+    identifier = "category3"
+    name = " 📅 RSVPs"
+    url = "/categories/rsvp"
+    parent = "category"
+    weight = 3
+[[main]]
+    identifier = "category4"
+    name = "💼 Status"
+    url = "/categories/status"
+    parent = "category"
+    weight = 3
+[[main]]
+    identifier = "category5"
+    name = "🚩 Daftar masuk"
+    url = "/categories/checkin"
+    parent = "category"
+    weight = 4
+[[main]]
+    identifier = "category6"
+    name = "💬 Balasan"
+    url = "/categories/reply"
+    parent = "category"
+    weight = 5
+[[main]]
+    identifier = "category7"
+    name = "🏆 Sukan"
+    url = "/categories/sport"
+    parent = "category"
+    weight = 6
+[[main]]
+    identifier = "category8"
+    name = "👍 Kegemaran"
+    url = "/categories/favourite"
+    parent = "category"
+    weight = 7
+[[main]]
+    identifier = "category9"
+    name = "🔄 Siaran semula"
+    url = "/categories/repost"
+    parent = "category"
+    weight = 8
+[[main]]
+    identifier = "category10"
+    name = "📷 Foto"
+    url = "/categories/photo"
+    parent = "category"
+    weight = 9
+
+[[main]]
+  identifier = "Projects"
+  name = "Projek"
+  url = "/projects"
+  weight = 3
+
+[[main]]
+  identifier = "News"
+  name = "Berita"
+  url = "/news"
+  weight = 4
+
+[[main]]
+  identifier = "About"
+  name = "Tentang"
+  url = "/about"
+  weight = 5
+
+[[main]]
+  identifier = "Search"
+  name = "Carian"
+  url = "/search"
+  weight = 6

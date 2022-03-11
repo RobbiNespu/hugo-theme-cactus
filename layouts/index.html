@@ -1,10 +1,8 @@
 {{ define "main" }}
   <section id="about">
-  {{ if isset .Site.Params "description" }}
-    {{ .Site.Params.description | $.Page.RenderString }}
-  {{ end }}
+      {{ i18n "description" | $.Page.RenderString }}
   {{ if isset .Site.Params "social" }}
-      <p>Find me on
+      <p>{{ i18n "findMe" }}
       {{ $length := (len .Site.Params.social) }}
       {{ range $index, $elem := .Site.Params.social}}
       {{ if eq $elem.name "email" }}
@@ -27,7 +25,7 @@
         {{ if (lt (add $index 2) $length) }}
           {{- print " , " -}}
         {{ else if (lt (add $index 1) $length) }}
-          {{- print " and " -}}
+          {{- print (i18n "and") -}}
         {{ else }}
           {{- print "." -}}
         {{ end }}
@@ -38,7 +36,7 @@
   </section>
 
   <section id="writing">
-    <span class="h1"><a href="{{ .Site.Params.mainSection | absURL }}">{{ .Site.Params.mainSectionTitle | default "Writings" }}</a></span>
+    <span class="h1"><a href="{{ .Site.Params.mainSection | absURL }}">{{ i18n "mainSectionTitle" }}</a></span>
     {{ if (and (and (isset .Site.Params "tagsoverview") (eq .Site.Params.tagsOverview true)) (gt (len .Site.Taxonomies.tags) 0)) }}
     <span class="h2">Topics</span>
     <span class="widget tagcloud">

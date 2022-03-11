@@ -8,6 +8,19 @@
         {{ range .Site.Menus.main }}
         <li><a href="{{ .URL }}">{{ .Name }}</a></li>
         {{ end }}
+        <!-- IsMultiLingual toggle-->
+        {{ if .Site.IsMultiLingual }}
+        {{ $node := . }}
+        {{ .Scratch.Set "separator" true }}
+            {{ range (default .Site.Home.AllTranslations .Translations) }}
+                  {{ if ne $.Site.Language .Language }}
+                    <li class="navigation-item">
+                      <a href="{{ .Permalink }}">{{ .Language.LanguageName | emojify}}</a>
+                    </li>
+                  {{ end }}
+              {{ end }}
+          {{ end }}
+        <!-- IsMultiLingual toggle-->
       </ul>
     </span>
     <br/>
