@@ -224,3 +224,21 @@ disqusShortname = "example" # Used when comments is enabled. Cactus will use sit
 [caches.getjson]
   dir = ":resourceDir/json"
   maxAge = -1
+
+[related]
+  includeNewer = true
+  threshold = 10
+  toLower = true
+  [[related.indices]]
+    name = "keywords"
+    weight = 80
+  [[related.indices]]
+    name = "title"
+    weight = 80
+  [[related.indices]]
+    name = "tags"
+    weight = 100
+  [[related.indices]]
+    name = "date"
+    weight = 60
+	pattern = "2006"
