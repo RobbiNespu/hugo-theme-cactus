@@ -1,0 +1,27 @@
+colortheme = "dark" # dark, light, white, or classic
+rss = true # generate rss feed. default value is false
+googleAnalyticsAsync = true # use asynchronous tracking. Synchronous tracking by default
+showAllPostsArchive = true # default:false
+noindexArchive = false # default, set to true if you don't want search engines to index archive pages (should improve SEO)
+
+# Home page settings
+mainSections = "posts" # your main section
+showAllPostsOnHomePage = true # default
+postsOnHomePage = 5 # this option will be ignored if showAllPostsOnHomePage is set to true
+tagsOverview = false # show tags overview by default.
+showProjectsList = false # show projects list by default (if projects data file exists).
+projectsUrl = "https://github.com/gohugoio" # title link for projects list
+
+# https://gohugo.io/functions/format/#hugo-date-and-time-templating-reference
+dateFormat = "2006-01-02" # default
+
+# Post page settings
+show_updated = true # default
+showReadTime = true # default
+tocInline = false
+
+# news timeline
+[news]
+    enabled = true # default: true
+    enabledOnHomePage = false # default: false
+    newsOnHomePage = 5

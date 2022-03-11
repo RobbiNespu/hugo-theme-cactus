@@ -1,0 +1,8 @@
+- id: Home
+  translation: "Home"
+- id:  Archives
+  translation: "Archives"
+- id: description
+  translation: "Hugo is a general-purpose website framework. Technically speaking, Hugo is a static site generator. Unlike systems that dynamically build a page with each visitor request, Hugo builds pages when you create or update your content."
+- id: mainSectionTitle
+  translation: "Writings (article)"

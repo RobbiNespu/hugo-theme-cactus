@@ -1,0 +1,8 @@
+- id: Home
+  translation: "Utama"
+- id:  Archives
+  translation: "Arkib"
+- id: description
+  translation: "Hugo ialah rangka kerja laman web tujuan umum. Dari segi teknikal, Hugo ialah penjana tapak statik. Tidak seperti sistem yang membina halaman secara dinamik dengan setiap permintaan pelawat, Hugo membina halaman apabila anda membuat atau mengemas kini kandungan anda."
+- id: mainSectionTitle
+  translation: "Penulisan (artikel)"
