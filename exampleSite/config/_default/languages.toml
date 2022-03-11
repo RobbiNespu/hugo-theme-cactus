@@ -2,7 +2,7 @@
     #contentDir = "en"
     languageName = "English"
     weight = 1
-  
+
   [ms]
     #contentDir = "ms"
     languageName = "Bahasa Melayu"
