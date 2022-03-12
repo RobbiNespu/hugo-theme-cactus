@@ -4,71 +4,71 @@
   url = "/"
   weight = 1
 
-[[main]]
+[[main]] # parent menus
     identifier = "category"
     name = "Archives"
     url = "/posts/"
     weight = 2
-[[main]]
-    identifier = "category1"
-    name = "📝 Articles"
-    url = "/categories/article"
-    parent = "category"
-    weight = 1
-[[main]]
-    identifier = "category2"
-    name = "⭐️ Bookmarks"
-    url = "/categories/bookmarks"
-    parent = "category"
-    weight = 2
-[[main]]
-    identifier = "category3"
-    name = " 📅 RSVPs"
-    url = "/categories/rsvp"
-    parent = "category"
-    weight = 3
-[[main]]
-    identifier = "category4"
-    name = "💼 Statuses"
-    url = "/categories/status"
-    parent = "category"
-    weight = 3
-[[main]]
-    identifier = "category5"
-    name = "🚩 Check-in"
-    url = "/categories/checkin"
-    parent = "category"
-    weight = 4
-[[main]]
-    identifier = "category6"
-    name = "💬 Replies"
-    url = "/categories/reply"
-    parent = "category"
-    weight = 5
-[[main]]
-    identifier = "category7"
-    name = "🏆 Sports"
-    url = "/categories/sport"
-    parent = "category"
-    weight = 6
-[[main]]
-    identifier = "category8"
-    name = "👍 Favourites"
-    url = "/categories/favourite"
-    parent = "category"
-    weight = 7
-[[main]]
-    identifier = "category9"
-    name = "🔄 Reposts"
-    url = "/categories/repost"
-    parent = "category"
-    weight = 8
-[[main]]
-    identifier = "category10"
-    name = "📷 Photos"
-    url = "/categories/photo"
-    parent = "category"
-    weight = 9
+        [[main]] # child menus
+            identifier = "category1"
+            name = "📝 Articles"
+            url = "/categories/article"
+            parent = "category"
+            weight = 1
+        [[main]]
+            identifier = "category2"
+            name = "⭐️ Bookmarks"
+            url = "/categories/bookmarks"
+            parent = "category"
+            weight = 2
+        [[main]]
+            identifier = "category3"
+            name = " 📅 RSVPs"
+            url = "/categories/rsvp"
+            parent = "category"
+            weight = 3
+        [[main]]
+            identifier = "category4"
+            name = "💼 Statuses"
+            url = "/categories/status"
+            parent = "category"
+            weight = 3
+        [[main]]
+            identifier = "category5"
+            name = "🚩 Check-in"
+            url = "/categories/checkin"
+            parent = "category"
+            weight = 4
+        [[main]]
+            identifier = "category6"
+            name = "💬 Replies"
+            url = "/categories/reply"
+            parent = "category"
+            weight = 5
+        [[main]]
+            identifier = "category7"
+            name = "🏆 Sports"
+            url = "/categories/sport"
+            parent = "category"
+            weight = 6
+        [[main]]
+            identifier = "category8"
+            name = "👍 Favourites"
+            url = "/categories/favourite"
+            parent = "category"
+            weight = 7
+        [[main]]
+            identifier = "category9"
+            name = "🔄 Reposts"
+            url = "/categories/repost"
+            parent = "category"
+            weight = 8
+        [[main]]
+            identifier = "category10"
+            name = "📷 Photos"
+            url = "/categories/photo"
+            parent = "category"
+            weight = 9
 
 [[main]]
   identifier = "Projects"
@@ -77,16 +77,58 @@
   weight = 3
 
 [[main]]
-  identifier = "News"
-  name = "News"
-  url = "/news"
-  weight = 4
-
-[[main]]
   identifier = "About"
   name = "About"
   url = "/about"
+  weight = 4
+
+[[main]]
+  identifier = "Others"
+  name = "Others"
+  url = "/others"
   weight = 5
+    [[main]]
+    identifier = "Others1"
+    name = "📰 News"
+    url = "others/news"
+    weight = 1
+    parent = "Others"
+    [[main]]
+    identifier = "Others2"
+    name = "😎 Talk"
+    url = "others/talk"
+    weight = 2
+    parent = "Others"
+    [[main]]
+    identifier = "Others3"
+    name = "📚 Reading"
+    url = "others/reading"
+    weight = 3
+    parent = "Others"
+    [[main]]
+    identifier = "Others4"
+    name = "📺 Watching"
+    url = "others/video"
+    weight = 4
+    parent = "Others"
+    [[main]]
+    identifier = "Others5"
+    name = "🎮 Gaming"
+    url = "others/gaming"
+    weight = 5
+    parent = "Others"
+    [[main]]
+    identifier = "Others7"
+    name = "🛒 Marketplace"
+    url = "others/marketplace"
+    weight = 6
+    parent = "Others"
+    [[main]]
+    identifier = "Others6"
+    name = "☔ Disclaimer"
+    url = "others/disclaimer"
+    weight = 7
+    parent = "Others"
 
 [[main]]
   name = "Search"

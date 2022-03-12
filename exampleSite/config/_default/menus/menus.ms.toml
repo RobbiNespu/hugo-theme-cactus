@@ -11,7 +11,7 @@
     weight = 2
 [[main]]
     identifier = "category1"
-    name = "📝 artikel"
+    name = "📝 Artikel"
     url = "/categories/article"
     parent = "category"
     weight = 1
@@ -77,16 +77,59 @@
   weight = 3
 
 [[main]]
-  identifier = "News"
-  name = "Berita"
-  url = "/news"
-  weight = 4
-
-[[main]]
   identifier = "About"
   name = "Tentang"
   url = "/about"
+  weight = 4
+
+[[main]]
+  identifier = "Others"
+  name = "Lain²"
+  url = "/others"
   weight = 5
+    [[main]]
+    identifier = "Others1"
+    name = "📰 Berita"
+    url = "others/news"
+    weight = 1
+    parent = "Others"
+    [[main]]
+    identifier = "Others2"
+    name = "😎 Bicara"
+    url = "others/talk"
+    weight = 2
+    parent = "Others"
+    [[main]]
+    identifier = "Others3"
+    name = "📚 Bacaan"
+    url = "others/reading"
+    weight = 3
+    parent = "Others"
+    [[main]]
+    identifier = "Others4"
+    name = "📺 Tontonan"
+    url = "others/video"
+    weight = 4
+    parent = "Others"
+    [[main]]
+    identifier = "Others5"
+    name = "🎮 Permainan"
+    url = "others/gaming"
+    weight = 5
+    parent = "Others"
+    [[main]]
+    identifier = "Others6"
+    name = "🛒 Jualan"
+    url = "others/marketplace"
+    weight = 6
+    parent = "Others"
+    [[main]]
+    identifier = "Others7"
+    name = "☔ Penafian"
+    url = "others/disclaimer"
+    weight = 7
+    parent = "Others"
+    
 
 [[main]]
   identifier = "Search"
