@@ -7,7 +7,7 @@
 [[main]]
     identifier = "category"
     name = "Arkib"
-    url = "/posts/ms"
+    url = "/ms/posts"
     weight = 2
 [[main]]
     identifier = "category1"
@@ -81,6 +81,31 @@
   name = "Tentang"
   url = "/about"
   weight = 4
+    [[main]]
+    identifier = "About1"
+    name = "🛠️ Ubah log"
+    url = "about/changelog"
+    weight = 1
+    parent = "About"
+    [[main]]
+    identifier = "About2"
+    name = "⚖️ Lesen"
+    url = "about/license"
+    weight = 2
+    parent = "About"
+    [[main]]
+    identifier = "About3"
+    name = "☔ Penafian"
+    url = "about/disclaimer"
+    weight = 3
+    parent = "About"
+    [[main]]
+    identifier = "About4"
+    name = "☎️ Hubungi"
+    url = "about/contact"
+    weight = 4
+    parent = "About"
+
 
 [[main]]
   identifier = "Others"
@@ -123,13 +148,6 @@
     url = "others/marketplace"
     weight = 6
     parent = "Others"
-    [[main]]
-    identifier = "Others7"
-    name = "☔ Penafian"
-    url = "others/disclaimer"
-    weight = 7
-    parent = "Others"
-    
 
 [[main]]
   identifier = "Search"

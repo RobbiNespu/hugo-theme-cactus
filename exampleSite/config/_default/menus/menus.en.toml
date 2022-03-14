@@ -81,6 +81,31 @@
   name = "About"
   url = "/about"
   weight = 4
+    [[main]]
+    identifier = "About1"
+    name = "🛠️ Changelog"
+    url = "about/changelog"
+    weight = 1
+    parent = "About"
+    [[main]]
+    identifier = "About2"
+    name = "⚖️ License"
+    url = "about/license"
+    weight = 2
+    parent = "About"
+    [[main]]
+    identifier = "About3"
+    name = "☔ Disclaimer"
+    url = "about/disclaimer"
+    weight = 3
+    parent = "About"
+    [[main]]
+    identifier = "About4"
+    name = "☎️ Contact"
+    url = "about/contact"
+    weight = 4
+    parent = "About"
+
 
 [[main]]
   identifier = "Others"
@@ -122,12 +147,6 @@
     name = "🛒 Marketplace"
     url = "others/marketplace"
     weight = 6
-    parent = "Others"
-    [[main]]
-    identifier = "Others6"
-    name = "☔ Disclaimer"
-    url = "others/disclaimer"
-    weight = 7
     parent = "Others"
 
 [[main]]
