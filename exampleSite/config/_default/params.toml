@@ -25,3 +25,35 @@ tocInline = false
     enabled = true # default: true
     enabledOnHomePage = false # default: false
     newsOnHomePage = 5
+
+[comments]
+enabled = false # default
+engine = "cactus_comments" # only disqus, utterances, and cactus_comments is supported
+[comments.utterances]
+      repo = "<github_username>/<github_reponame>"
+      label = "hugo-site-name" # you can use however you want to label your name in your repo's issues
+      theme = "github-light"
+[comments.cactuscomments]
+      siteName = "RobbiNespu" # see https://cactus.chat/ on how to register your site name
+      #serverUrl = "" # Defaults to https://matrix.cactus.chat:8448 (Cactus Chat public server)
+      #serverName = "" # Defaults to cactus.chat
+
+# the value of name should be an valid font awesome icon name (brands type)
+# https://fontawesome.com/icons?d=gallery&s=brands
+[[social]]
+name = "github"
+link = "https://github.com/gohugoio"
+[[social]]
+name = "linkedin"
+link = "https://www.linkedin.com/company/github/"
+[[social]]
+name = "email"
+link = "example@example.com"  # no need for "mailto:" in the head
+
+# Customize the copyright years
+# Note: if startYear/endYear not provided, will use current year.
+[copyright]
+enabled = true # default
+name = "Robbi Nespu" # cactus will use title if copyright is not set
+startYear = 2020
+endYear = 2022

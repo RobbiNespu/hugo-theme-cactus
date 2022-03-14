@@ -1,9 +1,9 @@
-  [en]
-    #contentDir = "en"
-    languageName = ":uk:"
-    weight = 1
+[en]
+  #contentDir = "en"
+  languageName = ":uk:"
+  weight = 1
   
-  [ms]
-    #contentDir = "ms"
-    languageName = ":malaysia:"
-    weight = 2
+[ms]
+  #contentDir = "ms"
+  languageName = ":malaysia:"
+  weight = 2
