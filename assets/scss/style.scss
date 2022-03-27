@@ -238,6 +238,46 @@ code {
   }
 }
 
+.project-list {
+  columns: 2;
+  column-gap: 1rem;
+  width: 100%;
+  padding: 0;
+  list-style: none;
+    .project-item {
+      border: 1px solid #bbb;
+      border-radius: 6px;
+      margin: 0 8px 8px 0;
+      width: 100%;
+      display: inline-block;
+    }
+    .project-item h3 {
+      // color: #383838;
+      display: block;
+      margin: 0px;
+      padding: 10px;
+    }
+    .project-item .webring-links {
+      display: block;
+      text-align: center;
+      padding-left: 10px;
+      padding-right: 10px;
+      padding-top: 10px;
+      padding-bottom: 6px;
+      display: flex;
+      justify-content: space-around;
+    }
+    .project-item img {
+      float: left;
+      border-bottom-left-radius: 6px;
+      border-bottom-right-radius: 6px;
+    }
+    .project-image {
+      width: 100%;
+      float: left;
+    }
+}
+
 // custom
 @media print {
   [noprint] {

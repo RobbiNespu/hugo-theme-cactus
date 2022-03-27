@@ -126,4 +126,37 @@
   </ul>
   </section>
   {{ end }}
+
+  <!-- Projects -->
+  <section id="projects">
+    <span class="h1"><a href={{ "projects" | absURL }}>Projects (professional & personal)</a></span>
+    <p>
+      When I'm not working I'd like to spend my time on different <a href="/projects">projects</a>. 
+      Below you will find both professional & personal projects.
+    </p>
+    <div class="project-list">
+      <div class="project-item">
+        <a href="https://webring.stavros.io">
+          <h3>Member of the Tech makers webring</h3>
+          <img class="project-image" src={{ "webring.png" | absURL }} alt="">
+        </a>
+        <div class="webring-links">
+          <a class="webring prev" href="https://webring.stavros.io/prev">Previous</a>
+          <a class="webring rand" href="https://webring.stavros.io/random">Random</a>
+          <a class="webring next" href="https://webring.stavros.io/next">Next</a>
+        </div>
+      </div>
+      {{ range first 5 (where .Site.RegularPages "Section" "in" (slice "projects")) }}
+        <div class="project-item">
+          <a href="{{ .Permalink }}">
+          <h3>{{ if .Title }} {{- .Title -}} {{ else }} {{- print "Untitled" -}}{{ end }}</h3>
+          <img class="project-image" src="{{ .Site.BaseURL }}/img/{{.Params.image_preview}}" alt="">
+          
+          </a>
+        </div>
+      </a>
+      {{ end }}
+    </div>
+  </section>
+
 {{ end }}
