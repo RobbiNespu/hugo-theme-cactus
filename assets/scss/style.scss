@@ -238,6 +238,41 @@ code {
   }
 }
 
+img.profile-image{
+  float: right;
+  width: 150px;
+  padding-left: 25px;
+  display: block;
+}
+figure.profile-image{
+  float: right;
+  padding-left: 25px;
+  margin: 0px;
+  width: 150px;
+}
+
+.client-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  column-gap: 30px;
+  row-gap: 30px;
+  a{
+    background-image: none;
+  }
+  a:hover{
+    background-image: none
+  }
+  .client-image {
+    width: 100%;
+    //filter: grayscale(100%);
+    filter: invert(100%);
+    //filter: saturate(100%);
+    //filter: sepia(100%);
+    //filter: hue-rotate(15deg);
+    //filter: drop-shadow(1px 0px 5px green);
+  }
+}
+
 .project-list {
   columns: 2;
   column-gap: 1rem;

@@ -1,5 +1,6 @@
 {{ define "main" }}
   <section id="about">
+    <img src="https://robbinespu.gitlab.io//images/upload/Screenshot_20210816_124946.png" alt="Robbi Nespu" class="profile-image">
       {{ i18n "description" | $.Page.RenderString }}
   {{ if isset .Site.Params "social" }}
       <p>{{ i18n "findMe" }}
@@ -126,6 +127,24 @@
   </ul>
   </section>
   {{ end }}
+
+  <!-- Clients -->
+  <section id="clients">
+    <span class="h1"><a href={{ "client" | absURL }}>FOSS involvement and Professional clients</a></span>
+    <p>
+      My <a href="/client">clients</a> vary from small startups to goverments and everything in between. 
+      People recommend me for my unique combination of <i>curiousity</i> and <i>applied solutions</i>.
+    </p>
+    <div class="client-list">
+      {{ range first 8 (where .Site.RegularPages "Section" "in" (slice "client")) }}
+        <div class="client-item">
+          <a href="{{ .Permalink }}">
+            <img class="client-image" src="{{ .Site.BaseURL }}/img/{{.Params.image_preview}}" alt="{{- .Title -}} {">
+          </a>
+        </div>
+      {{ end }}
+    </div>
+  </section>
 
   <!-- Projects -->
   <section id="projects">
