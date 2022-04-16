@@ -154,12 +154,13 @@ article {
   line-height: 1.25;
 }
 .article-tag {
-  display: flex;
+  // display: flex;
   // flex-direction: row;
   margin-top: 2%;
   // margin-bottom: 5%;
   margin-left: 1%;
   font-size: smaller;
+  text-align: justify;
   &:before {
     content: "🏷️";
     position: absolute;

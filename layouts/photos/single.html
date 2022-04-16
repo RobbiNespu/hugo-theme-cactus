@@ -67,15 +67,23 @@
     <div class="content" itemprop="articleBody">
       {{ .Content}}
     </div>
+    <!-- tags -->
     {{ if gt .Params.tags 0 }}
-        <div class="article-tag">
-            {{ range $index, $value := .Params.tags }}
-            {{ if gt $index 0 }} {{ print ", " }} {{ end }}
-            <a class="tag-link" href="{{ "/tags/" | relLangURL }}{{ $value | urlize }}" rel="tag">{{ $value }}</a>
+      <div class="article-tag">
+      {{ with  .Params.tags }}
+        {{ $navbar_len := sub (len .) 1 }}
+        {{ range $i, $nav_item := . }}
+            {{ if ne $i $navbar_len }}
+            <a class="tag-link" href="{{ "/tags/" | relLangURL }}{{ $nav_item | urlize }}" rel="tag">{{ $nav_item }},</a>
+            {{ else }}
+            <a class="tag-link" href="{{ "/tags/" | relLangURL }}{{ $nav_item | urlize }}" rel="tag">{{ $nav_item }}</a>
             {{ end }}
-        </div>
-        <hr />
+        {{ end }}
+      {{ end }}
+      </div>
+      <hr />
     {{ end }}
+    <!-- tags -->
   </article>
 
   {{ partial "related.html" . }}
