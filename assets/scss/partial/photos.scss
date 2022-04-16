@@ -1,0 +1,23 @@
+.article-gallery {
+    columns: 3;
+    column-gap: 1rem;
+    width: 100%;
+    padding: 0;
+    list-style: none;
+      .gallery-item {
+        border: 1px solid #bbb;
+        border-radius: 6px;
+        margin: 0 8px 8px 0;
+        width: 100%;
+        display: inline-block;
+      }
+      .gallery-item img {
+        float: left;
+        border-bottom-left-radius: 6px;
+        border-bottom-right-radius: 6px;
+      }
+      .gallery-image {
+        width: 100%;
+        float: left;
+      }
+  }
