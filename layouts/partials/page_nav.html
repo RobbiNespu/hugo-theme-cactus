@@ -1,3 +1,5 @@
+{{ if .IsPage }}
+{{ if .NextInSection | or .PrevInSection }}
 <div id="header-post" noprint>
   <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
   <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
@@ -26,16 +28,18 @@
     <br/>
     <span id="actions" noprint>
       <ul>
-        {{ if .Prev }}
+         <!-- Link to next page -->
+        {{ if .PrevInSection }}
         <li>
-          <a class="icon" href=" {{ .Prev.Permalink }}" aria-label="Previous">
+          <a class="icon" href="{{ .PrevInSection.Permalink }}" aria-label="Previous">
             <i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i>
           </a>
         </li>
         {{ end }}
-        {{ if .Next }}
+        <!-- Link to previous page -->
+        {{ if (.NextInSection) }}
         <li>
-          <a class="icon" href="{{ .Next.Permalink }}" aria-label="Next">
+          <a class="icon" href="{{ .NextInSection.Permalink }}" aria-label="Next">
             <i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i>
           </a>
         </li>
@@ -68,3 +72,5 @@
     {{ end }}
   </span>
 </div>
+{{ end }}
+{{ end }}
