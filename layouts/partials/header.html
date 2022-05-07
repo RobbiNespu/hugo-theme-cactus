@@ -3,9 +3,9 @@
   {{ if (isset .Site.Params "gravatar") }}
     <div id="logo" style="background-image: url(https://www.gravatar.com/avatar/{{ md5 .Site.Params.gravatar }}?s=100&d=identicon)"></div>
   {{ else if (isset .Site.Params "logo") }}
-    <div id="logo" style="background-image: url({{ .Site.Params.logo | absURL }}) !important; -webkit-print-color-adjust: exact !important;color-adjust: exact !important;"></div>
+    <div id="logo" style="background-image: url({{ .Site.Params.logo | relURL }}) !important; -webkit-print-color-adjust: exact !important;color-adjust: exact !important;"></div>
   {{ else }}
-    <div id="logo" style="background-image: url({{ "images/logo.svg" | absURL }}) !important; -webkit-print-color-adjust: exact !important;color-adjust: exact !important;"></div>
+    <div id="logo" style="background-image: url({{ "images/logo.svg" | relURL }}) !important; -webkit-print-color-adjust: exact !important;color-adjust: exact !important;"></div>
   {{ end}}
   <div id="title">
     <h1>{{ .Site.Title }}</h1>
