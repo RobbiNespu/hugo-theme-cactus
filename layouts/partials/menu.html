@@ -27,7 +27,7 @@
       {{ range (default .Site.Home.AllTranslations .Translations) }}
             {{ if ne $.Site.Language .Language }}
               <li class="navigation-item">
-                <a href="{{ .Permalink }}">{{ .Language.LanguageName | emojify}}</a>
+                <a href="{{ .RelPermalink }}">{{ .Language.LanguageName | emojify}}</a>
               </li>
             {{ end }}
         {{ end }}

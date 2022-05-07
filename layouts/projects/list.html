@@ -5,7 +5,7 @@
   <div class="project-list">
     {{ range (where .Site.RegularPages "Section" "in" (slice "project")) }}
       <div class="project-item">
-        <a href="{{ .Permalink }}">
+        <a href="{{ .RelPermalink }}">
         <h3>{{ if .Title }} {{- .Title -}} {{ else }} {{- print "Untitled" -}}{{ end }}</h3>
         <img class="project-image" src="{{ path.Join "img/" .Params.image_preview | absURL }}" alt="">
         </a>

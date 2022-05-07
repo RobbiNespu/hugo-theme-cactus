@@ -17,7 +17,7 @@
             {{ range (default .Site.Home.AllTranslations .Translations) }}
                   {{ if ne $.Site.Language .Language }}
                     <li class="navigation-item">
-                      <a href="{{ .Permalink }}">{{ .Language.LanguageName | emojify}}</a>
+                      <a href="{{ .RelPermalink }}">{{ .Language.LanguageName | emojify}}</a>
                     </li>
                   {{ end }}
               {{ end }}
@@ -31,7 +31,7 @@
          <!-- Link to next page -->
         {{ if .PrevInSection }}
         <li>
-          <a class="icon" href="{{ .PrevInSection.Permalink }}" aria-label="Previous">
+          <a class="icon" href="{{ .PrevInSection.RelPermalink }}" aria-label="Previous">
             <i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i>
           </a>
         </li>
@@ -39,7 +39,7 @@
         <!-- Link to previous page -->
         {{ if (.NextInSection) }}
         <li>
-          <a class="icon" href="{{ .NextInSection.Permalink }}" aria-label="Next">
+          <a class="icon" href="{{ .NextInSection.RelPermalink }}" aria-label="Next">
             <i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i>
           </a>
         </li>
