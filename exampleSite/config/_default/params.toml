@@ -20,6 +20,9 @@ show_updated = true # default
 showReadTime = true # default
 tocInline = false
 
+# Search setting 
+searchableSections = "posts, projects, client, photos" # you can check with .Section: {{ .Section }} to identify the section
+
 # news timeline
 [news]
     enabled = true # default: true
