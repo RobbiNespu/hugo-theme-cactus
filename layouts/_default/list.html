@@ -18,6 +18,7 @@
         <time datetime="{{ time .Date }}" itemprop="datePublished">{{ .Date.Format (.Site.Params.dateFormat | default "2006-01-02") }}</time>
       </div>
       <span>
+        {{ if .Draft }} <span class="draft-label">DRAFT</span> {{ end }}
         <a class="" href="{{ .RelPermalink }}">{{ if .Title }} {{ .Title }} {{ else }} Untitled {{ end }}</a>
       </span>
     </li>

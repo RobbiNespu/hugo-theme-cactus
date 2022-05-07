@@ -322,3 +322,28 @@ figure.profile-image{
     display: none !important;
   }
 }
+
+.draft-label{
+  color: #383838;
+  text-decoration: none;
+  padding: 2px 4px;
+  border-radius: 4px;
+  margin-left: 6px;
+  background-color: #119bdb;
+  font-size: 10px;
+  animation: animate 1.5s linear infinite;
+}
+
+@keyframes animate {
+  0% {
+      opacity: 0;
+  }
+
+  50% {
+      opacity: 0.7;
+  }
+
+  100% {
+      opacity: 0;
+  }
+}
