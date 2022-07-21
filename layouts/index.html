@@ -1,6 +1,6 @@
 {{ define "main" }}
   <section id="about">
-    <img src="https://robbinespu.gitlab.io//images/upload/Screenshot_20210816_124946.png" alt="Robbi Nespu" class="profile-image">
+    <img src="/img/Screenshot_20210816_124946.png" alt="Robbi Nespu" class="profile-image">
       {{ i18n "description" | $.Page.RenderString }}
   {{ if isset .Site.Params "social" }}
       <p>{{ i18n "findMe" }}
@@ -57,6 +57,10 @@
     {{ end }}
     {{ $dataFormat := .Site.Params.dateFormat | default "2006-01-02" }}
     {{ $mainPosts := (sort ( where site.RegularPages "Type" "in" site.Params.mainSections ) "Date" "desc") }}
+    {{ $mainPosts := $mainPosts | intersect  ( where .Site.RegularPages "Params.webmentionDelete401" "!=" "true" ) }}
+    {{ $mainPosts := $mainPosts | union  ( where .Site.RegularPages ".Draft" true ) }}
+    {{ $mainPosts := $mainPosts | intersect (where site.RegularPages "Type" "in" site.Params.mainSections) }}
+
     {{ if $showAllPostsOnHomePage }}
     <ul class="post-list">
       {{ range (.Paginate $mainPosts).Pages }}

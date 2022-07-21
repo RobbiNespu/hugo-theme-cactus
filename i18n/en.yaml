@@ -3,7 +3,7 @@
 - id: Archives
   translation: "Archives"
 - id: description
-  translation: "Hugo is a general-purpose website framework. Technically speaking, Hugo is a static site generator. Unlike systems that dynamically build a page with each visitor request, Hugo builds pages when you create or update your content."
+  translation: "Hello there! My name is Robbi Nespu. This blog is mostly about my journey on software development / devOps, information security and personal adventures. You can check README for more infomation"
 - id: mainSectionTitle
   translation: "Writings (article)"
 - id: contentLicense
