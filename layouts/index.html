@@ -36,6 +36,7 @@
   {{ partial "optional-about.html" . }}
   </section>
 
+  {{ if eq .Site.Params.showWritingsOnHomePage true }}
   <section id="writing">
     <span class="h1"><a href="{{ .Site.Params.mainSection | relURL }}">{{ i18n "mainSectionTitle" }}</a></span>
     {{ if (and (and (isset .Site.Params "tagsoverview") (eq .Site.Params.tagsOverview true)) (gt (len .Site.Taxonomies.tags) 0)) }}
@@ -88,6 +89,7 @@
     </ul>
     {{ end }}
   </section>
+  {{ end }}
 
   {{ $showProjectsList := false }}
   {{ if (isset .Site.Params "showprojectslist") }}
@@ -133,6 +135,7 @@
   {{ end }}
 
   <!-- Clients -->
+  {{ if eq .Site.Params.showClientsOnHomePage true }}
   <section id="clients">
     <span class="h1"><a href={{ "client" | absURL }}>FOSS involvement and Professional clients</a></span>
     <p>
@@ -148,8 +151,10 @@
       {{ end }}
     </div>
   </section>
+  {{ end }}
 
   <!-- Projects -->
+  {{ if eq .Site.Params.showProjectOnHomePage true }}
   <section id="projects">
     <span class="h1"><a href={{ "projects" | absURL }}>Projects (professional & personal)</a></span>
     <p>
@@ -180,5 +185,6 @@
       {{ end }}
     </div>
   </section>
+  {{ end }}
 
 {{ end }}
