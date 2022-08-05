@@ -3,7 +3,7 @@
 - id: Archives
   translation: "Archives"
 - id: description
-  translation: "Hello there! My name is Robbi Nespu. This blog is mostly about my journey on software development / devOps, information security and personal adventures. You can check README for more infomation"
+  translation: "Hello there! My name is **Robbi Nespu**. This blog is mostly about my journey on software development / devOps, information security, financial, real estate, property and personal adventures. You can check README for more infomation."
 - id: mainSectionTitle
   translation: "Writings (article)"
 - id: contentLicense
@@ -17,6 +17,6 @@
 - id: findMe
   translation: "Find me on"
 - id: and
-  translation: "and"
+  translation: " and"
 - id: made_with
   translation: "Made with"

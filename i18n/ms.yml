@@ -3,7 +3,7 @@
 - id: Archives
   translation: "Arkib"
 - id: description
-  translation: "Hugo ialah rangka kerja laman web tujuan umum. Dari segi teknikal, Hugo ialah penjana tapak statik. Tidak seperti sistem yang membina halaman secara dinamik dengan setiap permintaan pelawat, Hugo membina halaman apabila anda membuat atau mengemas kini kandungan anda."
+  translation: "Apa khabar! nama saya **Robbi Nespu**. Laman web ini adalah perkongsian perjalanan saya mengenai kejuruteraan pembangunan perisian / devOps, keselamatan informasi, kewangan, hartanah dan pengembaraan peribadi saya. Anda boleh baca README untuk maklumat lebih lanjut."
 - id: mainSectionTitle
   translation: "Penulisan (artikel)"
 - id: contentLicense
@@ -17,6 +17,6 @@
 - id: findMe
   translation: "Berkenalan dengan saya di"
 - id: and
-  translation: "dan"
+  translation: " dan"
 - id: made_with
   translation: "Dibangunkan dengan"
