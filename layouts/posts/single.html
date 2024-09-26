@@ -8,22 +8,23 @@
 
   <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
     <header>
+      <a href="{{ .Site.BaseURL }}"><div id="logo" style="background-image: url(http://localhost:1313/images/logo.svg)"></div></a>
       <h1 class="posttitle" itemprop="name headline">
         {{ .Title }}
       </h1>
       <div class="meta">
-        {{ if (or (isset .Site "author") (isset .Site "title"))}}
+        {{ if (or (.Site.Author) (.Site.Title))}}
         <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <span itemprop="name">
-            {{ if isset .Site "author" }}
-              {{ .Site.Author }}
-            {{ else if isset .Site "title" }}
-              {{ .Site.Title }}
+            {{ if .Site.Author }}
+              <!-- {{ .Site.Author }} -->
+            {{ else if .Site.Title }}
+              <!-- {{ .Site.Title }} -->
             {{ end }}
           </span>
         </span>
         {{ end }}
-        <div class="postdate">
+        <div class="postdate">📅
           {{ $dataFormat := .Site.Params.dateFormat | default "2006-01-02" }}
           <time datetime="{{ .Date }}" itemprop="datePublished">{{ .Date.Format $dataFormat }}</time>
           {{ if (and .Site.Params.show_updated (ne .Lastmod .Date)) }}
@@ -32,27 +33,16 @@
         </div>
         {{ $showReadTime := .Site.Params.showReadTime | default false }}
         {{if $showReadTime}}
-        <div class="article-read-time">
-          <i class="far fa-clock"></i>
+        <div class="article-read-time">⏰
           {{ $readTime := math.Round (div (countwords .Content) 220.0) }}
-          {{ $readTime }} minute read
+          {{ $readTime }} minutes
         </div>
         {{ end }}
         {{ if gt .Params.categories 0 }}
-        <div class="article-category">
-            <i class="fas fa-archive"></i>
+        <div class="article-category">📂
             {{ range $index, $value := .Params.categories }}
             {{ if gt $index 0 }} {{ print ", " }} {{ end }}
             <a class="category-link" href="{{ "/categories/" | relLangURL }}{{ $value | urlize }}">{{ $value }}</a>
-            {{ end }}
-        </div>
-        {{ end }}
-        {{ if gt .Params.tags 0 }}
-        <div class="article-tag">
-            <i class="fas fa-tag"></i>
-            {{ range $index, $value := .Params.tags }}
-            {{ if gt $index 0 }} {{ print ", " }} {{ end }}
-            <a class="tag-link" href="{{ "/tags/" | relLangURL }}{{ $value | urlize }}" rel="tag">{{ $value }}</a>
             {{ end }}
         </div>
         {{ end }}
@@ -76,7 +66,17 @@
     <div class="content" itemprop="articleBody">
       {{ .Content}}
     </div>
+    {{ if gt .Params.tags 0 }}
+        <div class="article-tag">
+            {{ range $index, $value := .Params.tags }}
+            {{ if gt $index 0 }} {{ print ", " }} {{ end }}
+            <a class="tag-link" href="{{ "/tags/" | relLangURL }}{{ $value | urlize }}" rel="tag">{{ $value }}</a>
+            {{ end }}
+        </div>
+        {{ end }}
   </article>
+
+  {{ partial "related.html" . }}
 
   {{ partial "comments.html" . }}
 

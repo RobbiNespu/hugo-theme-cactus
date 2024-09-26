@@ -1,0 +1,37 @@
+{{ $currentPage := . -}}
+
+<div id="nav">
+    <ul>
+      <li class="icon">
+        <a href="#" aria-label="Menu"><i class="fas fa-bars fa-2x" aria-hidden="true"></i></a>
+      </li>
+      {{ range .Site.Menus.main }}
+        {{ if .HasChildren }}
+          <li class="dropdown">
+            <a href="{{ .URL }}" onmouseover="javascript:void(0)" class="dropbtn">{{ .Name }} <i class="fa fa-caret-down"></i></a>
+            <div class="dropdown-content">
+              {{ range .Children }}
+                <a href="{{ .URL }}">{{ .Name }}</a>
+              {{ end }}
+            </div>
+          </li>
+        {{ else }}
+        <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+        {{ end }}
+      {{ end }}
+
+  <!-- IsMultiLingual toggle-->
+  {{ if .Site.IsMultiLingual }}
+  {{ $node := . }}
+  {{ .Scratch.Set "separator" true }}
+      {{ range (default .Site.Home.AllTranslations .Translations) }}
+            {{ if ne $.Site.Language .Language }}
+              <li class="navigation-item">
+                <a href="{{ .Permalink }}">{{ .Language.LanguageName | emojify}}</a>
+              </li>
+            {{ end }}
+        {{ end }}
+    {{ end }}
+  <!-- IsMultiLingual toggle-->
+    </ul>
+</div>

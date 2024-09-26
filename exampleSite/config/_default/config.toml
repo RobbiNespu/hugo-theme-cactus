@@ -1,0 +1,85 @@
+baseURL = "https://example.com"
+title = "DEMO WEBSITE"
+description = "Actions Speak Louder Than Words!"
+theme = "cactus"
+copyright = "You" # deprecated, please use params.copyright
+disqusShortname = "example" # Used when comments is enabled. Cactus will use site title if not set
+# googleAnalytics = "UA-1234-5"
+
+
+# summaryLength = 2
+
+[outputFormats]
+  [outputFormats.SearchIndex]
+    path = "/search/"
+    mediaType = "application/json"
+    isPlainText = true
+    notAlternative = true
+
+[outputs]
+  home = ["HTML", "RSS", "SearchIndex"]
+
+[markup]
+  [markup.tableOfContents]
+    endLevel = 4
+    ordered = false
+    startLevel = 2
+  [markup.highlight]
+    codeFences = true
+    guessSyntax = false
+    hl_Lines = ""
+    lineNoStart = 1
+    lineNos = true
+    lineNumbersInTable = false
+    noClasses = true
+    style = "dracula"
+    tabWidth = 4
+
+[privacy]
+  #[privacy.disqus]
+  #  disable = false
+  #[privacy.googleAnalytics]
+  #  anonymizeIP = false
+  #  disable = false
+  #  respectDoNotTrack = false
+  #  useSessionStorage = false
+  #[privacy.instagram]
+  #  disable = false
+  #  simple = false
+  [privacy.twitter]
+    disable =  false #default: false
+    enableDNT = true #default: false
+    simple = false
+  #[privacy.vimeo]
+  #  disable = false
+  #  enableDNT = false
+  #  simple = false
+  [privacy.youtube]
+    disable = false
+    privacyEnhanced = false
+
+[caches]
+[caches.getjson]
+  dir = ":resourceDir/json"
+  maxAge = -1
+
+[related]
+  includeNewer = true
+  threshold = 10
+  toLower = true
+  [[related.indices]]
+    name = "keywords"
+    weight = 80
+  [[related.indices]]
+    name = "title"
+    weight = 80
+  [[related.indices]]
+    name = "tags"
+    weight = 100
+  [[related.indices]]
+    name = "date"
+    weight = 60
+  pattern = "2006"
+
+languageCode = "en"
+defaultContentLanguage = "en" 

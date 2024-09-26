@@ -1,17 +1,30 @@
-<div id="header-post">
+<div id="header-post" noprint>
   <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
   <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
   <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;" aria-label="Top of Page"><i class="fas fa-chevron-up fa-lg"></i></a>
   <span id="menu">
     <span id="nav">
       <ul>
-        {{ range .Site.Menus.main }} 
+        {{ range .Site.Menus.main }}
         <li><a href="{{ .URL }}">{{ .Name }}</a></li>
         {{ end }}
+        <!-- IsMultiLingual toggle-->
+        {{ if .Site.IsMultiLingual }}
+        {{ $node := . }}
+        {{ .Scratch.Set "separator" true }}
+            {{ range (default .Site.Home.AllTranslations .Translations) }}
+                  {{ if ne $.Site.Language .Language }}
+                    <li class="navigation-item">
+                      <a href="{{ .Permalink }}">{{ .Language.LanguageName | emojify}}</a>
+                    </li>
+                  {{ end }}
+              {{ end }}
+          {{ end }}
+        <!-- IsMultiLingual toggle-->
       </ul>
     </span>
     <br/>
-    <span id="actions">
+    <span id="actions" noprint>
       <ul>
         {{ if .Prev }}
         <li>

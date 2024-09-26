@@ -1,0 +1,22 @@
+- id: Home
+  translation: "Utama"
+- id: Archives
+  translation: "Arkib"
+- id: description
+  translation: "Hugo ialah rangka kerja laman web tujuan umum. Dari segi teknikal, Hugo ialah penjana tapak statik. Tidak seperti sistem yang membina halaman secara dinamik dengan setiap permintaan pelawat, Hugo membina halaman apabila anda membuat atau mengemas kini kandungan anda."
+- id: mainSectionTitle
+  translation: "Penulisan (artikel)"
+- id: contentLicense
+  translation: "Kandungan yang dilesenkan di bawah CC BY-NC-SA 4.0."
+- id:  Copyright
+  translation: "Hakcipta"
+- id: bestView
+  translation: "Paparan terbaik dengan mana-mana pelayar web GUI moden dengan resolusi 1280x1024."
+- id: disclaimer
+  translation: "Penulisan di halaman ini adalah milik saya dan tidak semestinya mewakili jawatan, strategi atau pendapat majikan saya."
+- id: findMe
+  translation: "Berkenalan dengan saya di"
+- id: and
+  translation: "dan"
+- id: made_with
+  translation: "Dibangunkan dengan"

@@ -1,0 +1,22 @@
+- id: Home
+  translation: "Home"
+- id: Archives
+  translation: "Archives"
+- id: description
+  translation: "Hugo is a general-purpose website framework. Technically speaking, Hugo is a static site generator. Unlike systems that dynamically build a page with each visitor request, Hugo builds pages when you create or update your content."
+- id: mainSectionTitle
+  translation: "Writings (article)"
+- id: contentLicense
+  translation: "Content licensed under CC BY-NC-SA 4.0."
+- id: Copyright
+  translation: "Copyright"
+- id: bestView
+  translation: "Best viewed with any modern GUI web browsers with resolution of 1280x1024."
+- id: disclaimer
+  translation: "The postings on this site are my own and don't necessarily represent my employer’s positions, strategies or opinions."
+- id: findMe
+  translation: "Find me on"
+- id: and
+  translation: "and"
+- id: made_with
+  translation: "Made with"

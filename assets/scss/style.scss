@@ -15,8 +15,8 @@
 html {
   margin: 0;
   padding: 0;
-  height: 100%;
-  border-top: 2px solid $color-text;
+  height: 90%;
+  //border-top: 2px solid $color-text;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
 }
@@ -138,10 +138,12 @@ body {
 @import "partial/post/actions_desktop";
 @import "partial/post/actions_mobile";
 @import "partial/index";
+@import "partial/menu";
 @import "partial/article";
 @import "partial/archive";
 @import "partial/comments";
 @import "partial/footer";
+@import "partial/disclaimer";
 @import "partial/pagination";
 @import "partial/search";
 @import "partial/tags";
@@ -151,13 +153,14 @@ body {
 pre {
   overflow-x: auto;
   padding: 15px 15px 10px 15px;
-  border: 1px dotted $color-border;
+  border: 1px dotted $color-border-code;
   border-radius: 2px;
   -webkit-border-radius: 2px;
   font-size: 13px;
   font-family: $font-family-mono;
   line-height: 22px;
   position: relative;
+  background-color: $color-border-code;
 
   .code-copy-btn {
     position: absolute;
@@ -193,12 +196,17 @@ pre {
 code {
   font-family: $font-family-mono;
   padding: 0 5px;
-  border: 1px dotted $color-border;
+  border: 1px dotted #40aa60; //$color-border;
   border-radius: 2px;
   -webkit-border-radius: 2px;
+  background-color: $color-border-code;
+  font-size: 87.5%;
+  color: $color-text-code ;
 }
 
 .highlight {
+  -webkit-print-color-adjust: exact !important;   /* Chrome, Safari, Edge */
+  color-adjust: exact !important;                 /*Firefox*/
 
   & > div {
     border-radius: 2px;
@@ -227,5 +235,12 @@ code {
         padding-left: 0;
       }
     }
+  }
+}
+
+// custom
+@media print {
+  [noprint] {
+    display: none !important;
   }
 }

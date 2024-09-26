@@ -1,0 +1,22 @@
+#disclaimer{
+    position: absolute;
+    bottom: 1px;
+    display: flex !important;
+    align-self: flex-end;
+
+    .center-text{
+        text-align: center;
+    }
+
+    p{
+        margin: auto;
+    }
+
+    a{
+        //font-weight: bold;
+        font-size: 10px;
+        background-image: none;
+        color: #666;
+    }
+
+}

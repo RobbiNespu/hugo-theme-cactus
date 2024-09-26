@@ -1,0 +1,30 @@
+{
+  "list": [
+    {
+      "date": "Apr 2021",
+      "desc": "news dummy content 1",
+      "url": "https://www.google.com"
+    },
+    {
+      "date": "Jan 2020",
+      "desc": "news dummy content 2"
+    },
+    {
+      "date": "Dec 2019",
+      "desc": "news dummy content 3"
+    },
+    {
+      "date": "Apr 2018",
+      "desc": "news dummy content 4",
+      "url": "https://www.google.com"
+    },
+    {
+      "date": "Jan 2017",
+      "desc": "news dummy content 5"
+    },
+    {
+      "date": "Dec 2016",
+      "desc": "news dummy content 6"
+    }
+  ]
+}

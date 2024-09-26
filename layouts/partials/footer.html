@@ -1,14 +1,32 @@
-<footer id="footer">
+<footer id="footer" noprint>
   <div class="footer-left">
-    Copyright  &copy; {{ now.Format "2006" }} {{ if .Site.Copyright }} {{ print .Site.Copyright | markdownify }} {{ else }} {{ print .Site.Title }} {{ end }}
+    {{ i18n "contentLicense"}}
+    {{ $copyrightEnabled := true }}
+    {{ if (isset .Site.Params "copyright") }}
+      {{ $copyrightEnabled = .Site.Params.Copyright.Enabled | default false }}
+    {{ end }}
+    {{ if $copyrightEnabled }}
+    {{ $startYear := .Site.Params.Copyright.StartYear | default (now.Format "2006") }}
+    {{ $endYear := .Site.Params.Copyright.EndYear | default (now.Format "2006") }}
+    {{ i18n "Copyright"}}  &copy;
+    {{ if (eq $startYear $endYear) }} {{ $startYear }} {{ else }} {{ $startYear }}-{{ $endYear }} {{ end }} {{ if .Site.Params.Copyright.Name }} {{ print .Site.Params.Copyright.Name | markdownify }} {{ else }} {{ print .Site.Title }} {{ end }}
+  {{ end }}
   </div>
-  <div class="footer-right">
-    <nav>
-      <ul>
-        {{ range .Site.Menus.main }} 
-        <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+
+  <div class="footer-right hidden-mobile">
+    &lt;
+    {{ with .Site.Menus.main }}
+    {{ $navbar_len := len . }}
+        {{ range $i, $nav_item := . }}
+            <a href="{{ $nav_item.URL }}" title="{{ $nav_item.Name }}" style="border-bottom:0;">{{ $nav_item.Name }}</a>
+            {{ if ne (add $i 1) $navbar_len }}|{{ end }}
         {{ end }}
-      </ul>
-    </nav>
+    {{ end }}
+    &gt;
+  </div>
+  <div style="position: absolute;margin-bottom: -45px;padding-top: 15px;display: block;">
+    {{ i18n "bestView" }}
+    {{ i18n "disclaimer" }}<br/><br/>
+    {{ i18n "made_with"}} &#10084;&#65039; {{ i18n "and" }} <a href="https://www.gohugo.io">Hugo</a>.<br/><br/>
   </div>
 </footer>
